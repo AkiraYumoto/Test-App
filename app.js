@@ -7,7 +7,7 @@ const app = express();
 
 mongoose
     .connect(
-    'mongodb+srv://AkiraYumoto:Nuevachicago16@cluster0.j3vvk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+    `mongodb+srv://AkiraYumoto:${process.env.MONGO_DB_PASS}@cluster0.j3vvk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
     )
     .then(() => {
         app.listen(port, () => {
